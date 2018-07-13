@@ -33,6 +33,7 @@ permalink: /:year-:month:=day/:title
 paginate: 5
 
 plugins:
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-remote-theme
 
