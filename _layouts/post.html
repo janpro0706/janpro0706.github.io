@@ -22,6 +22,9 @@ layout: default
 
   {{ content }}
 
+  {% for tag in page.tags %}
+    <span style="background-color: #DDDDDD; border-radius: 3px; padding: 3px;"># {{ tag }}</span>
+  {% endfor %}
 </div>
 
 <div class="pagination">
