@@ -8,11 +8,11 @@ title: Tags
   <h1>Tags</h1>
   <ul class="tag-collection">
     <li>
-      <label><input class="tag-nav" type="radio" name="tag" checked />All</label>
+      <label class="hashtag selected"><input class="tag-nav" type="radio" name="tag" checked />All</label>
     </li>
     {% for tag in site.tags %}
       <li>
-        <label><input class="tag-nav" type="radio" name="tag" />{{ tag | first }}</label>
+        <label class="hashtag"><input class="tag-nav" type="radio" name="tag" />{{ tag | first }}</label>
       </li>
     {% endfor %}
   </ul>

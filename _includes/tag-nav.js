@@ -14,22 +14,24 @@ const tagArchiveArray = [ ...tagArchives ];
       console.log(curIdx);
 
       if (curIdx == -1) {
+        tagArray[0].closest('.hashtag').classList.add('selected');
+
         tagArchiveArray.forEach((t, i) => {
-          if (i != prevIdx) {
-            t.classList.remove('hide');
-          }
+          t.classList.remove('hide');
+          tagArray[i + 1].closest('.hashtag').classList.remove('selected');
         });
       } else {
-        if (prevIdx == -1) {
-          tagArchiveArray.forEach((t, i) => {
-            if (i != curIdx) {
-              t.classList.add('hide');
-            }
-          });
-        } else {
-          tagArchiveArray[prevIdx].classList.add('hide');
-          tagArchiveArray[curIdx].classList.remove('hide');
-        }
+        tagArray[0].closest('.hashtag').classList.remove('selected');
+
+        tagArchiveArray.forEach((t, i) => {
+          if (i == curIdx) {
+            tagArchiveArray[i].classList.remove('hide');
+            tagArray[i + 1].closest('.hashtag').classList.add('selected');
+          } else {
+            tagArchiveArray[i].classList.add('hide');
+            tagArray[i + 1].closest('.hashtag').classList.remove('selected');
+          }
+        });
       }
 
       prevIdx = curIdx;

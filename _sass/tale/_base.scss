@@ -68,3 +68,13 @@ td {
 .hide {
   display: none;
 }
+
+.hashtag {
+  &::before {
+    content: "# ";
+  }
+
+  background-color: #DDDDDD;
+  border-radius: 3px;
+  padding: 3px;
+}
