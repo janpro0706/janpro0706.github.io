@@ -23,7 +23,7 @@ layout: default
   {{ content }}
 
   {% for tag in page.tags %}
-    <span class="hashtag">{{ tag }}</span>
+    <span class="hashtag"><a href="{{ tag | prepend: '/tags?tag=' | prepend: site.baseurl }}">{{ tag }}</a></span>
   {% endfor %}
 </div>
 

@@ -77,4 +77,9 @@ td {
   background-color: #DDDDDD;
   border-radius: 3px;
   padding: 3px;
+
+  a {
+    color: $default-color;
+    text-decoration: none !important;
+  }
 }

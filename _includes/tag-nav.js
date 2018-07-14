@@ -38,3 +38,28 @@ const tagArchiveArray = [ ...tagArchives ];
     });
   });
 })();
+
+(() => {
+  const urlSearch = new URLSearchParams(location.search);
+
+  if (urlSearch.has('tag')) {
+    const tagName = urlSearch.get('tag');
+
+    const tagNames = [ ...tagArray.slice(1) ].map(t => {
+      return t.closest('label').innerText;
+    });
+
+    const idx = tagNames.indexOf(tagName);
+    if (idx >= 0) {
+      tagArchiveArray[idx].classList.remove('hide');
+      tagArray[idx + 1].closest('.hashtag').classList.add('selected');
+
+      tagArchiveArray.forEach((t, i) => {
+        if (i != idx) {
+          tagArchiveArray[i].classList.add('hide');
+        }
+      })
+      tagArray[0].closest('.hashtag').classList.remove('selected');
+    }
+  }
+})();

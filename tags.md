@@ -20,11 +20,11 @@ title: Tags
 
 <div class="archive">
   {% for tags in site.tags %}
-    <div class="tag-archive">
+    <div class="tag-archive catalogue">
       {% capture tag %}{{ tags | first }}{% endcapture %}
       <h1>{{ tag }}</h1>
       {% for post in site.tags[tag] %}
-        <p>{{ post.title }}</p>
+        <a href="{{ post.url | prepent: site.baseurl }}" class="catalogue-item">{{ post.title }}</a>
       {% endfor %}
     </div>
   {% endfor %}
