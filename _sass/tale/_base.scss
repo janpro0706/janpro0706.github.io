@@ -74,9 +74,11 @@ td {
     content: "# ";
   }
 
+  display: inline-block;
   background-color: #DDDDDD;
   border-radius: 3px;
   padding: 3px;
+  margin-bottom: 6px;
 
   a {
     color: $default-color;
