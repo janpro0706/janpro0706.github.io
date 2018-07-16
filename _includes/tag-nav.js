@@ -8,7 +8,7 @@ const tagArchiveArray = [ ...tagArchives ];
   let curIdx;
 
   tagArray.forEach(tag => {
-    tag.addEventListener('change', (e) => {
+    tag.addEventListener('click', (e) => {
       const idx = tagArray.indexOf(tag);
       curIdx = idx - 1;
       console.log(curIdx);
