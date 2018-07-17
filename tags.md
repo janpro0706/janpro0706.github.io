@@ -4,13 +4,15 @@ permalink: /tags/
 title: Tags
 ---
 
+{% assign sitetags = site.tags | sort %}
+
 <div class="tag">
   <h1>Tags</h1>
   <ul class="tag-collection">
     <li>
       <label class="hashtag selected"><input class="tag-nav" type="radio" name="tag" checked />All</label>
     </li>
-    {% for tag in site.tags %}
+    {% for tag in sitetags %}
       <li>
         <label class="hashtag"><input class="tag-nav" type="radio" name="tag" />{{ tag | first }}</label>
       </li>
@@ -19,7 +21,7 @@ title: Tags
 </div>
 
 <div class="archive">
-  {% for tags in site.tags %}
+  {% for tags in sitetags %}
     {% capture tag %}{{ tags | first }}{% endcapture %}
     <div class="tag-archive">
       <h1>#{{ tag }}</h1>
