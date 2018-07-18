@@ -52,7 +52,7 @@ function snow() {
 
 	function falling() {
 		for (i = 0; i < snows.length; i++) {
-			snows[i].x += Math.sin(angle) * snows[i].radius + windVelX;
+			snows[i].x += Math.sin(angle) * snows[i].radius + windVelX / 5;
 			snows[i].y += Math.cos(angle) + snows[i].curvature + snows[i].radius / 2;
 
 			if ((snows[i].x < -5 || snows[i].x > canvasWidth + 5) || snows[i].y > canvasHeight + 5) {
@@ -159,4 +159,12 @@ function snow() {
       step = 0;
     }
   });
+
+	var count = 0;
+
+	window.addEventListener('touchstart', function(e) {
+		if (++count == 8) {
+			snow();
+		}
+	});
 })();
