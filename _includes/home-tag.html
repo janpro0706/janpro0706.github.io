@@ -1,0 +1,11 @@
+{% if post %}
+  {% assign tags = post.tags %}
+{% else %}
+  {% assign tags = page.tags %}
+{% endif %}
+
+{% for tag in tags %}
+  <span class="hashtag">
+    <a href="{{ tag | prepend: '/tags?tag=' | prepend: site.baseurl }}">{{ tag }}</a>
+  </span>
+{% endfor %}
