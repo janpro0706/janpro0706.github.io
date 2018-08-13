@@ -2,6 +2,7 @@
 layout: post
 title: "파일을 git으로부터 제외시키기"
 date: 2018-07-17
+comments: true
 tags: git
 
 ---

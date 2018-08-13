@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Babel 사용하기"
+comments: true
 tags: JavaScript ECMAScript babel
 ---
 

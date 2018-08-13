@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "블로그에 눈내리기"
+comments: true
 tags: JavaScript Canvas
 ---
 
